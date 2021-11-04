@@ -1,0 +1,51 @@
+html {
+  font-size: 14px;
+}
+:root {
+  --blue-grey-lighten-4: #cfd8dc;
+  --blue-grey-lighten-3: #b0bec5;
+  --blue-grey-lighten-5: #eceff1;
+}
+
+.bg-blue-grey-lighten-5 {
+  background-color: var(--blue-grey-lighten-5);
+}
+
+.tab-main .v-tab {
+  width: 229px;
+  justify-content: inherit;
+  text-transform: inherit;
+}
+.tab-main .v-tabs-slider-wrapper {
+  height: 3px !important;
+}
+.tab-main .icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+.t-search-inbox
+  .t-input-search
+  .v-text-field.v-text-field--solo:not(.v-text-field--solo-flat)
+  > .v-input__control
+  > .v-input__slot {
+  box-shadow: none;
+  background-color: var(--blue-grey-lighten-5);
+  border-radius: 0px;
+  margin-top: 30px;
+  width: 103%;
+}
+.t-search-inbox .t-icon-search {
+  border-radius: 10px 0 0 10px;
+  width: 103%;
+}
+.t-search-inbox .t-slider-search {
+  border-radius: 0 10px 10px 0;
+}
+.theme--light
+  .v-navigation-drawer:not(.v-navigation-drawer--floating)
+  .v-navigation-drawer__border {
+  background-color: white !important;
+}
+.t-telex-search {
+  margin-left: -20px;
+}

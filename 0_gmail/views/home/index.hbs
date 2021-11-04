@@ -1,0 +1,18 @@
+<template>
+  <v-tabs class="tab-main" color="#d93025" slider-color="#d93025" v-model="tab">
+    <v-tab v-for="itemtab in TabItems" :key="itemtab.tab">
+      <v-icon small left v-text="itemtab.icon"></v-icon>
+      <span v-text="itemtab.tab"></span>
+
+    </v-tab>
+  </v-tabs>
+
+  <v-tabs-items v-model="tab">
+    <v-tab-item v-for="itemtab in TabItems" :key="itemtab.tab">
+      <v-card flat>
+        <v-card-text><span v-text="itemtab.content"></span></v-card-text>
+      </v-card>
+    </v-tab-item>
+  </v-tabs-items>
+</template>
+<script src="js/home/app.js"></script>

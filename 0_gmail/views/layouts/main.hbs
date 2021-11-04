@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="css/style_main.css">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"
+    ></script>
+    <div id="app">
+      <v-app>
+
+        <v-app-bar app clipped-right flat height="62" color="white">
+          <v-spacer>
+            <div class="t-telex-search">
+<table class="t-search-inbox ">
+              <tr>
+                <td width="56">
+                  <div class="bg-blue-grey-lighten-5 t-icon-search">
+                    <v-btn icon>
+                      <v-icon>fa-search</v-icon>
+                    </v-btn>
+                  </div>
+                </td>
+                <td width="568">
+                  <div class="t-input-search">
+                    <v-text-field label="Tim kiem trong hop thu" solo></v-text-field>
+                  </div>
+                </td>
+                <td width="56">
+                  <div class="bg-blue-grey-lighten-5 t-slider-search">
+                    <v-btn icon>
+                      <v-icon>fa-sliders</v-icon>
+                    </v-btn>
+                  </div>
+                  
+                </td>
+              </tr>
+            </table>
+            </div>
+            
+          </v-spacer>
+
+          <div class="float-right">
+            <v-responsive max-width="250">
+            <v-btn icon>
+              <v-icon>fa-question-circle</v-icon>
+            </v-btn>
+            <v-btn icon >
+              <v-icon>fa-cog</v-icon>
+            </v-btn>
+            <v-btn icon>
+              <v-icon>fa-bars</v-icon>
+            </v-btn>
+            <v-btn icon >
+              <v-avatar color="primary" size="32">
+                <span class="white--text text-h6">VJ</span>
+              </v-avatar>
+            </v-btn>
+          </div>
+          </v-responsive>
+        </v-app-bar>
+
+        <v-navigation-drawer v-model="drawer" app width="256">
+          {{!-- <v-navigation-drawer
+            v-model="drawer"
+            absolute
+            color="grey lighten-3"
+            mini-variant
+          >
+            <v-avatar
+              class="d-block text-center mx-auto mt-4"
+              color="grey darken-1"
+              size="36"
+            ></v-avatar>
+
+            <v-divider class="mx-3 my-5"></v-divider>
+
+            <v-avatar
+              v-for="n in 6"
+              :key="n"
+              class="d-block text-center mx-auto mb-9"
+              color="grey lighten-1"
+              size="28"
+            ></v-avatar>
+          </v-navigation-drawer> --}}
+
+          <v-sheet color="" height="76" width="100%">
+            <template>
+              <v-row style="padding: 11px 0" class="ml-4">
+                <v-col sm="2">
+                  <v-btn
+                  icon
+                  color="indigo"
+                  >
+                    <v-icon>fa-bars</v-icon>
+                  </v-btn>
+                </v-col>
+                <v-col sm="10">
+                  <v-img 
+                  height="40"
+                  max-width="109"
+                  src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png"></v-img>
+                </v-col>
+              </v-row>
+            </template>
+            <v-divider></v-divider>
+          </v-sheet>
+          <v-btn width="140" elevation="6" height="48" rounded color="" white class="mt-2 ml-2">
+            <v-img max-width="30" height="25" src="https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png"></v-img>
+            <span class="ml-2">Soạn thư</span>
+          </v-btn>
+          {{> home/menu}}
+        </v-navigation-drawer>
+
+        <v-navigation-drawer app clipped right width="56">
+          <v-list>
+            <v-list-item v-for="n in 5" :key="n" link>
+              <v-list-item-content>
+                <v-list-item-title>Item {{n}}</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-navigation-drawer>
+
+        <v-main>
+          <v-divider></v-divider>
+          {{{body}}}
+        </v-main>
+
+        <v-footer app color="transparent" height="72" inset>
+          <v-text-field
+            background-color="grey lighten-1"
+            dense
+            flat
+            hide-details
+            rounded
+            solo
+          ></v-text-field>
+        </v-footer>
+      </v-app>
+    </div>
+  </body>
+</html>

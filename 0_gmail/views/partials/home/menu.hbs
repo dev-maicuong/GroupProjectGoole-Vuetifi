@@ -1,0 +1,24 @@
+<div id="menu">
+  <v-list dense>
+    <v-subheader>REPORTS</v-subheader>
+    <v-list-item-group v-model="selectedItem" color="primary">
+      <v-list-item dense v-for="(item, i) in items" :key="i" height="24">
+        <v-list-item-icon>
+          <v-icon v-text="item.icon"></v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title v-text="item.text"></v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+      <v-list-item dense>
+        <v-list-item-icon>
+          <v-icon v-text="iconSubmenu"></v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title v-text="titleSubmenu"></v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list-item-group>
+  </v-list>
+</div>
+{{! <script src="js/home/menu.js"></script> }}
